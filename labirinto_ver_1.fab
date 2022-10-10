@@ -1,0 +1,177 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <variables>
+    <variable type="" id="+Nl,Y@3UOJbBP_5XE#4f">arm_id</variable>
+    <variable type="" id="PV#6-TFK`pdj]@gVbU-b">mov_speed</variable>
+    <variable type="" id=".-1[B:IhAmb?i[$TrWnH">acc_x_axis</variable>
+    <variable type="" id="[wIjk{,U~/BGsupO`o8m">acc_y_axis</variable>
+  </variables>
+  <block type="variables_set" id="NUB|f|.I#wk#~[.R+p+i" x="-337" y="-1490">
+    <field name="VAR" id="+Nl,Y@3UOJbBP_5XE#4f">arm_id</field>
+    <value name="VALUE">
+      <shadow type="math_number" id="VK(YXy/,V}j`uj}bcCn[">
+        <field name="NUM">0</field>
+      </shadow>
+      <block type="fable_get_module_id" id="ChtjxFEcrJ*pO0@5Sw1x">
+        <mutation xmlns="http://www.w3.org/1999/xhtml" id_input="false"></mutation>
+        <field name="ID">6PD</field>
+      </block>
+    </value>
+    <next>
+      <block type="variables_set" id="xQF`0XKDq^hLMx9MOJ,{">
+        <field name="VAR" id="PV#6-TFK`pdj]@gVbU-b">mov_speed</field>
+        <value name="VALUE">
+          <shadow type="math_number" id="l%fk{-RlvP=H#$xrV[|}">
+            <field name="NUM">70</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="controls_whileUntil" id=")8]5SKe0_:U;G*D-yWCr">
+            <field name="MODE">WHILE</field>
+            <value name="BOOL">
+              <shadow type="logic_boolean" id="#$;Z!|YW2tv3FAHH3mZ{">
+                <field name="BOOL">TRUE</field>
+              </shadow>
+            </value>
+            <statement name="DO">
+              <block type="variables_set" id="#[d{ez0On0-[g!3.}G}+">
+                <field name="VAR" id=".-1[B:IhAmb?i[$TrWnH">acc_x_axis</field>
+                <value name="VALUE">
+                  <shadow type="math_number" id="7(ybZ$$--Wr0}FMgz1Gs">
+                    <field name="NUM">0</field>
+                  </shadow>
+                  <block type="math_arithmetic" id="LBOXL%C.}MIcgJY!|p:Q">
+                    <field name="OP">MULTIPLY</field>
+                    <value name="A">
+                      <shadow type="math_number" id="C)K[9,jT$7+9S~+{6*g3">
+                        <field name="NUM">1</field>
+                      </shadow>
+                      <block type="fable_read_face_sensor" id="?AquJZQ9seVI1kN-eY17">
+                        <field name="METRIC">'accelerationX'</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <shadow type="math_number" id="x,!w-!Yp^%Fn)|HPx%zj">
+                        <field name="NUM">1.5</field>
+                      </shadow>
+                    </value>
+                  </block>
+                </value>
+                <next>
+                  <block type="variables_set" id="1riu,BAZgJOJ{k=(p*Q+">
+                    <field name="VAR" id="[wIjk{,U~/BGsupO`o8m">acc_y_axis</field>
+                    <value name="VALUE">
+                      <shadow type="math_number" id="s.UYfx}?%vwMMz#bq`}/">
+                        <field name="NUM">0</field>
+                      </shadow>
+                      <block type="math_arithmetic" id="6vNr1^(kZDHLAQ`djgCp">
+                        <field name="OP">MULTIPLY</field>
+                        <value name="A">
+                          <shadow type="math_number">
+                            <field name="NUM">1</field>
+                          </shadow>
+                          <block type="fable_read_face_sensor" id="_}jxi=H*Ll,~G?Ga6L{3">
+                            <field name="METRIC">'accelerationY'</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <shadow type="math_number" id="i-/OD7:NN8Na{G.UbVFN">
+                            <field name="NUM">1.5</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="fable_set_module_motor_pos_speed" id="m,Em5dtVjex.jIRl3xg:">
+                        <mutation xmlns="http://www.w3.org/1999/xhtml" id_input="true"></mutation>
+                        <field name="ID">#</field>
+                        <value name="MOTOR_POSITION_X">
+                          <shadow type="fable_joint_angle" id="w;tLTzL{Y$:jMeMUAUx:">
+                            <field name="ANGLE">0</field>
+                          </shadow>
+                          <block type="variables_get" id="RY,R.,sFv-#dFz#I*qLT">
+                            <field name="VAR" id=".-1[B:IhAmb?i[$TrWnH">acc_x_axis</field>
+                          </block>
+                        </value>
+                        <value name="MOTOR_POSITION_Y">
+                          <shadow type="fable_joint_angle" id="@pD+qUpo6/F}|PFv,hM!">
+                            <field name="ANGLE">0</field>
+                          </shadow>
+                          <block type="variables_get" id="qxTV4oS9]vS?PV~W;!1e">
+                            <field name="VAR" id="[wIjk{,U~/BGsupO`o8m">acc_y_axis</field>
+                          </block>
+                        </value>
+                        <value name="MOTORS_SPEEDS">
+                          <shadow type="math_number" id="6}-p.zrZKNBy=]Rf?|@p">
+                            <field name="NUM">100</field>
+                          </shadow>
+                          <block type="variables_get" id="@f%xS7xjxP=ee(Wx^EeR">
+                            <field name="VAR" id="PV#6-TFK`pdj]@gVbU-b">mov_speed</field>
+                          </block>
+                        </value>
+                        <value name="#">
+                          <shadow type="fable_get_module_id" id="2]sni5g6R5;A$+(LEGT*">
+                            <mutation xmlns="http://www.w3.org/1999/xhtml" id_input="false"></mutation>
+                            <field name="ID">Hub</field>
+                          </shadow>
+                          <block type="variables_get" id="-sIKZ;5R}dp%lVt(2Uu7">
+                            <field name="VAR" id="+Nl,Y@3UOJbBP_5XE#4f">arm_id</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="fable_set_face_focus" id="EkFggoT.6yQ.2-2aTLA_">
+                            <value name="POS_X">
+                              <shadow type="math_number" id="VA276)2=$g3E5J.wM?eg">
+                                <field name="NUM">0</field>
+                              </shadow>
+                              <block type="math_arithmetic" id="Xmo{xZ,UY./$W#2C0TBu">
+                                <field name="OP">MULTIPLY</field>
+                                <value name="A">
+                                  <shadow type="math_number" id="7i8GI;0=BJ+_}kOs:JgB">
+                                    <field name="NUM">1</field>
+                                  </shadow>
+                                  <block type="variables_get" id="aRf#F):CEuDa2[,Jo~-q">
+                                    <field name="VAR" id=".-1[B:IhAmb?i[$TrWnH">acc_x_axis</field>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <shadow type="math_number" id="N3/fCKs(3w9k;o(n3:z_">
+                                    <field name="NUM">5</field>
+                                  </shadow>
+                                </value>
+                              </block>
+                            </value>
+                            <value name="POS_Y">
+                              <shadow type="math_number" id="|rm_qj,^zkdwen=Jiqev">
+                                <field name="NUM">0</field>
+                              </shadow>
+                              <block type="math_arithmetic" id="C_9=nu9tAzL4,6C4B1[-">
+                                <field name="OP">MULTIPLY</field>
+                                <value name="A">
+                                  <shadow type="math_number" id="ic/;tP4-o.%HE{C1X``h">
+                                    <field name="NUM">1</field>
+                                  </shadow>
+                                  <block type="variables_get" id="*w]!kGUKoOVa]|n5%[FD">
+                                    <field name="VAR" id="[wIjk{,U~/BGsupO`o8m">acc_y_axis</field>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <shadow type="math_number" id="sy6A7m:AT.dF!TBdWoem">
+                                    <field name="NUM">5</field>
+                                  </shadow>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>
