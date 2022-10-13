@@ -1,0 +1,63 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <block type="controls_whileUntil" id="j4Fa^0eV+Kz*=wJh/yS~" x="-455" y="-217">
+    <field name="MODE">WHILE</field>
+    <value name="BOOL">
+      <shadow type="logic_boolean" id="Y{C,]/YO.$+I7`is~m2~">
+        <field name="BOOL">TRUE</field>
+      </shadow>
+    </value>
+    <statement name="DO">
+      <block type="fable_set_module_motor_pos_speed" id="@/h8o;Jnu8jcQ:#:8LA@">
+        <mutation xmlns="http://www.w3.org/1999/xhtml" id_input="false"></mutation>
+        <field name="ID">6PD</field>
+        <value name="MOTOR_POSITION_X">
+          <shadow type="fable_joint_angle" id="QP@(7aduNkZJQ4^T7iW6">
+            <field name="ANGLE">0</field>
+          </shadow>
+          <block type="math_arithmetic" id="3(KJzxE$~fp[NR*rpx$@">
+            <field name="OP">MULTIPLY</field>
+            <value name="A">
+              <shadow type="math_number" id="i-;^)x2WI@@JV]mw]`Z}">
+                <field name="NUM">1</field>
+              </shadow>
+              <block type="fable_read_face_sensor" id="TQa;|qL);Z]Ci}I{9qB/">
+                <field name="METRIC">'accelerationX'</field>
+              </block>
+            </value>
+            <value name="B">
+              <shadow type="math_number" id="{GO^ewzH:Zv?2/foYTRQ">
+                <field name="NUM">1.5</field>
+              </shadow>
+            </value>
+          </block>
+        </value>
+        <value name="MOTOR_POSITION_Y">
+          <shadow type="fable_joint_angle" id="d%1VesqHU50hWPV_pxx4">
+            <field name="ANGLE">0</field>
+          </shadow>
+          <block type="math_arithmetic" id="^$5sZtGgAe52vVTt.)2=">
+            <field name="OP">MULTIPLY</field>
+            <value name="A">
+              <shadow type="math_number">
+                <field name="NUM">1</field>
+              </shadow>
+              <block type="fable_read_face_sensor" id="kma0;/E0U-nVU.{Q:EJm">
+                <field name="METRIC">'accelerationY'</field>
+              </block>
+            </value>
+            <value name="B">
+              <shadow type="math_number" id="Us*P1jMSyKXq$J/,wZ|I">
+                <field name="NUM">1.5</field>
+              </shadow>
+            </value>
+          </block>
+        </value>
+        <value name="MOTORS_SPEEDS">
+          <shadow type="math_number" id="Gs}h)|smhJ-E3-0Ppu~o">
+            <field name="NUM">50</field>
+          </shadow>
+        </value>
+      </block>
+    </statement>
+  </block>
+</xml>

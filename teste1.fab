@@ -1,0 +1,238 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <block type="controls_whileUntil" id="bq5M)qch*~B(~f$]`X:K" x="-593" y="-363">
+    <field name="MODE">WHILE</field>
+    <value name="BOOL">
+      <shadow type="logic_boolean" id="-yxHbRWOV/P;%7MY+csq">
+        <field name="BOOL">TRUE</field>
+      </shadow>
+    </value>
+    <statement name="DO">
+      <block type="controls_if" id="f[RR@nxQ,L[}a1p,y!-R">
+        <value name="IF0">
+          <shadow type="logic_boolean" id="Brc3~dwqj``238/:-hK2">
+            <field name="BOOL">TRUE</field>
+          </shadow>
+          <block type="fable_check_custom_key" id="H)Fa`QVj)]DANB~bJ$Z*">
+            <field name="KEYBUTTON">1</field>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="fable_set_face_emotion" id="!*+jxayzNy/fSq#ZLOn(">
+            <field name="EMOTION_ID">'Happy'</field>
+          </block>
+        </statement>
+        <next>
+          <block type="controls_if" id="-P[TLYt+oBqx,/i$^*xa">
+            <value name="IF0">
+              <shadow type="logic_boolean" id="k1]X997i+ZMG!n,gc7un">
+                <field name="BOOL">FALSE</field>
+              </shadow>
+              <block type="fable_check_custom_key" id="2OR(u2Prt%H!dUR_?!I9">
+                <field name="KEYBUTTON">2</field>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="fable_set_face_emotion" id="yEv*Xuf|!{T0L}M/`Ys-">
+                <field name="EMOTION_ID">'Sad'</field>
+              </block>
+            </statement>
+            <next>
+              <block type="controls_if" id="aGT*[e{(tx25Z4?F=u8=">
+                <value name="IF0">
+                  <shadow type="logic_boolean">
+                    <field name="BOOL">FALSE</field>
+                  </shadow>
+                  <block type="fable_check_custom_key" id="Fz6LKJa7hfT=`d[Pufk^">
+                    <field name="KEYBUTTON">3</field>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block type="fable_set_face_emotion" id="L/hVl{TZ})e2!s~=@K^]">
+                    <field name="EMOTION_ID">'Surprised'</field>
+                  </block>
+                </statement>
+                <next>
+                  <block type="controls_if" id="GgJp5w5*/Al+Pq=ZnZ,d">
+                    <value name="IF0">
+                      <shadow type="logic_boolean">
+                        <field name="BOOL">FALSE</field>
+                      </shadow>
+                      <block type="fable_check_custom_key" id="[w{@|Qg%4|6VsI[@EL5A">
+                        <field name="KEYBUTTON">4</field>
+                      </block>
+                    </value>
+                    <statement name="DO0">
+                      <block type="fable_set_face_emotion" id="mf=oU-rNwAIbl@@Ecpo^">
+                        <field name="EMOTION_ID">'Angry'</field>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="controls_if" id="]7}V5){_5^NmloAPnjfk">
+                        <value name="IF0">
+                          <shadow type="logic_boolean">
+                            <field name="BOOL">FALSE</field>
+                          </shadow>
+                          <block type="fable_check_custom_key" id="F7hS::5_kG*RB8R5Ur;`">
+                            <field name="KEYBUTTON">5</field>
+                          </block>
+                        </value>
+                        <statement name="DO0">
+                          <block type="fable_set_face_emotion" id="dy$C$n^t$O2b}Sd7be,*">
+                            <field name="EMOTION_ID">'Disgust'</field>
+                          </block>
+                        </statement>
+                        <next>
+                          <block type="controls_if" id="auj)!zq?^QDMuM54VU7}">
+                            <value name="IF0">
+                              <shadow type="logic_boolean">
+                                <field name="BOOL">FALSE</field>
+                              </shadow>
+                              <block type="fable_check_custom_key" id="LrLX@i2/eR*/#5]/+*UX">
+                                <field name="KEYBUTTON">t</field>
+                              </block>
+                            </value>
+                            <statement name="DO0">
+                              <block type="fable_set_face_emotion" id=",f{(;Obg,j~5f]l~Ogrl">
+                                <field name="EMOTION_ID">'Neutral'</field>
+                              </block>
+                            </statement>
+                            <next>
+                              <block type="controls_if" id="$}EDx+_`()/5zvF,/fpx">
+                                <value name="IF0">
+                                  <shadow type="logic_boolean">
+                                    <field name="BOOL">FALSE</field>
+                                  </shadow>
+                                  <block type="fable_check_custom_key" id="HoIfaGc95Tf3-/jd1=90">
+                                    <field name="KEYBUTTON">KEYCODE_SPACEBAR</field>
+                                  </block>
+                                </value>
+                                <statement name="DO0">
+                                  <block type="fable_set_module_motor_pos_speed" id="n[aJFxH@a|Y?D)JuP5Ms">
+                                    <mutation xmlns="http://www.w3.org/1999/xhtml" id_input="false"></mutation>
+                                    <field name="ID">1XD</field>
+                                    <value name="MOTOR_POSITION_X">
+                                      <shadow type="fable_joint_angle" id="!7FY=6U$#~wrQ4A/vJaq">
+                                        <field name="ANGLE">0</field>
+                                      </shadow>
+                                      <block type="math_random_int" id="*0+AErJY{8$o:.D^)j~3">
+                                        <value name="FROM">
+                                          <shadow type="math_number" id="E[SIE6,%[Wk24D)3Wq4g">
+                                            <field name="NUM">0</field>
+                                          </shadow>
+                                        </value>
+                                        <value name="TO">
+                                          <shadow type="math_number" id="8(Gpx):sT3R]-XbL(]C%">
+                                            <field name="NUM">90</field>
+                                          </shadow>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <value name="MOTOR_POSITION_Y">
+                                      <shadow type="fable_joint_angle" id="z0hzAlE_nl}z5w]l~:cO">
+                                        <field name="ANGLE">0</field>
+                                      </shadow>
+                                      <block type="math_random_int" id=":yM.8arT4a@WtoIs-qLy">
+                                        <value name="FROM">
+                                          <shadow type="math_number" id="M(21iotRk,$!:}RxM0fd">
+                                            <field name="NUM">0</field>
+                                          </shadow>
+                                        </value>
+                                        <value name="TO">
+                                          <shadow type="math_number" id="3I[#y{9EXszz6b{F6=~z">
+                                            <field name="NUM">70</field>
+                                          </shadow>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <value name="MOTORS_SPEEDS">
+                                      <shadow type="math_number" id="F9yMkfOX:z#`gX0`JN_=">
+                                        <field name="NUM">50</field>
+                                      </shadow>
+                                      <block type="math_random_int" id="h~zZN}E_mg,DRr5Qx[0P">
+                                        <value name="FROM">
+                                          <shadow type="math_number" id="`Surh0/!@D$t4EGd6?Ii">
+                                            <field name="NUM">50</field>
+                                          </shadow>
+                                        </value>
+                                        <value name="TO">
+                                          <shadow type="math_number" id="Yz1An-.~jh=JPIKpa.E:">
+                                            <field name="NUM">70</field>
+                                          </shadow>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <next>
+                                      <block type="fable_set_module_motor_pos_speed" id="w1ON19bEuLxUy;@}-[Mu">
+                                        <mutation xmlns="http://www.w3.org/1999/xhtml" id_input="false"></mutation>
+                                        <field name="ID">FZD</field>
+                                        <value name="MOTOR_POSITION_X">
+                                          <shadow type="fable_joint_angle" id="wE?s8{nwt{x@2z|eiDI_">
+                                            <field name="ANGLE">0</field>
+                                          </shadow>
+                                          <block type="math_random_int" id="M?dMhXc*luvJMW}CXwkf">
+                                            <value name="FROM">
+                                              <shadow type="math_number" id="[Ez#V4M$LevJ$Eldb/?)">
+                                                <field name="NUM">-70</field>
+                                              </shadow>
+                                            </value>
+                                            <value name="TO">
+                                              <shadow type="math_number" id="M|PzGTAbl=CcNCwV#7U_">
+                                                <field name="NUM">0</field>
+                                              </shadow>
+                                            </value>
+                                          </block>
+                                        </value>
+                                        <value name="MOTOR_POSITION_Y">
+                                          <shadow type="fable_joint_angle" id="X5VLk{~tR04S9wbQBJ94">
+                                            <field name="ANGLE">0</field>
+                                          </shadow>
+                                          <block type="math_random_int" id="bvW`Qb1dlF/D2_tnr:ih">
+                                            <value name="FROM">
+                                              <shadow type="math_number" id="NCP9e,c/Gthl|2(XBrSs">
+                                                <field name="NUM">0</field>
+                                              </shadow>
+                                            </value>
+                                            <value name="TO">
+                                              <shadow type="math_number" id="8TgQ3kXU/}[KajXd(,q`">
+                                                <field name="NUM">70</field>
+                                              </shadow>
+                                            </value>
+                                          </block>
+                                        </value>
+                                        <value name="MOTORS_SPEEDS">
+                                          <shadow type="math_number" id="bs*uObIg1DjzF*QnLS~z">
+                                            <field name="NUM">50</field>
+                                          </shadow>
+                                          <block type="math_random_int" id="[[3|O.;QIN{}Ui_nl6;J">
+                                            <value name="FROM">
+                                              <shadow type="math_number" id="22BSv3aNB#Un:07fD;ws">
+                                                <field name="NUM">50</field>
+                                              </shadow>
+                                            </value>
+                                            <value name="TO">
+                                              <shadow type="math_number" id="D:)=ULqIznvW(j]ri,!G">
+                                                <field name="NUM">70</field>
+                                              </shadow>
+                                            </value>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </statement>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>

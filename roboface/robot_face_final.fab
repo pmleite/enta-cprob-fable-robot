@@ -1,0 +1,456 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <variables>
+    <variable type="" id="MeLksMw[_,{+OUEMuES{">rigth_arm</variable>
+    <variable type="" id="XZzY:,q76}Y!t5C9KV6c">left_arm</variable>
+    <variable type="" id="x,g@)ZqMB)PRW3k9qn=d">curr_x_face_pos</variable>
+    <variable type="" id="VDC?(MYHd*_;cPAl,sEX">camara_x_resolution</variable>
+    <variable type="" id="Er;^LF*tItKxzf_80}*[">curr_y_face_pos</variable>
+    <variable type="" id="`2.FzP?=LteXO.*ZYC:^">camera_y_resolution</variable>
+  </variables>
+  <block type="procedures_defreturn" id="e@^9v^8?a`Cow~D}1xz)" x="723" y="-219">
+    <field name="NAME">random_x_angle_left_arm</field>
+    <comment pinned="false" h="80" w="160">Describe this function...</comment>
+    <value name="RETURN">
+      <shadow type="math_number" id="vW2o_6H;CljziajVFJLq">
+        <field name="NUM">1</field>
+      </shadow>
+      <block type="math_random_int" id="sqQrO@e$]U=yqeHmvBh0">
+        <value name="FROM">
+          <shadow type="math_number" id="^EXMVrrB+ef%b%Skttpn">
+            <field name="NUM">-90</field>
+          </shadow>
+        </value>
+        <value name="TO">
+          <shadow type="math_number" id="3Vx_fNG3d/4z_t1RDXU;">
+            <field name="NUM">10</field>
+          </shadow>
+        </value>
+      </block>
+    </value>
+  </block>
+  <block type="variables_set" id=":NVUxVnC(KevPdn(Rj?H" x="46" y="-118">
+    <field name="VAR" id="MeLksMw[_,{+OUEMuES{">rigth_arm</field>
+    <value name="VALUE">
+      <shadow type="math_number" id="J=^aPzOMpq@/BxZv==rO">
+        <field name="NUM">0</field>
+      </shadow>
+      <block type="fable_get_module_id" id="?z9dWX;~dYO{ez]vo+}?">
+        <mutation xmlns="http://www.w3.org/1999/xhtml" id_input="false"></mutation>
+        <field name="ID">1XD</field>
+      </block>
+    </value>
+    <next>
+      <block type="variables_set" id="_R^`M)8h+*4nrQW,NLmz">
+        <field name="VAR" id="XZzY:,q76}Y!t5C9KV6c">left_arm</field>
+        <value name="VALUE">
+          <shadow type="math_number" id="o4.K5cV=]7Vu[^?WCIyX">
+            <field name="NUM">0</field>
+          </shadow>
+          <block type="fable_get_module_id" id="nLtr!8Ubb}d[jJ6g,S1~">
+            <mutation xmlns="http://www.w3.org/1999/xhtml" id_input="false"></mutation>
+            <field name="ID">FZD</field>
+          </block>
+        </value>
+        <next>
+          <block type="variables_set" id="+n@f`Bt2d,s6m4uIMYTp">
+            <field name="VAR" id="VDC?(MYHd*_;cPAl,sEX">camara_x_resolution</field>
+            <value name="VALUE">
+              <shadow type="math_number" id="`L7C9M%u*LDS`Ge:1~*E">
+                <field name="NUM">200</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="variables_set" id="`LWc2917dEmO~L1Kn`Lb">
+                <field name="VAR" id="`2.FzP?=LteXO.*ZYC:^">camera_y_resolution</field>
+                <value name="VALUE">
+                  <shadow type="math_number" id="-8%sRZ{J[J?K0^]Z}BoJ">
+                    <field name="NUM">150</field>
+                  </shadow>
+                </value>
+                <next>
+                  <block type="controls_whileUntil" id="$I+!6@}BHHN%(]2zz@VE">
+                    <field name="MODE">WHILE</field>
+                    <value name="BOOL">
+                      <shadow type="logic_boolean" id="s!+JLuen_U?zqDXtpQU.">
+                        <field name="BOOL">TRUE</field>
+                      </shadow>
+                    </value>
+                    <statement name="DO">
+                      <block type="procedures_callnoreturn" id="!5Aj8iV}Ok)4!zHh=`F#">
+                        <mutation name="camera_eye_pos"/>
+                      </block>
+                    </statement>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+  <block type="procedures_defreturn" id="(rIgOC$*1Q%-.kZGKIJF" x="722" y="-104">
+    <field name="NAME">random_x_angle_rigth_arm</field>
+    <comment pinned="false" h="80" w="160">Describe this function...</comment>
+    <value name="RETURN">
+      <shadow type="math_number">
+        <field name="NUM">1</field>
+      </shadow>
+      <block type="math_random_int" id=":P@j#pW1?H#:@nM#qL-)">
+        <value name="FROM">
+          <shadow type="math_number" id="Yce{RKzwJpo!To1O`woz">
+            <field name="NUM">-10</field>
+          </shadow>
+        </value>
+        <value name="TO">
+          <shadow type="math_number" id="m(N/QtnCUg[H4_3Z15Ep">
+            <field name="NUM">90</field>
+          </shadow>
+        </value>
+      </block>
+    </value>
+  </block>
+  <block type="procedures_defreturn" id="F1wn1m|~!{7?CNmaJ]Zw" x="724" y="11">
+    <field name="NAME">random_y_angle_rigth_arms</field>
+    <comment pinned="false" h="80" w="160">Describe this function...</comment>
+    <value name="RETURN">
+      <shadow type="math_number">
+        <field name="NUM">1</field>
+      </shadow>
+      <block type="math_random_int" id="LXkeDmtVGh2kkV`%r:Ck">
+        <value name="FROM">
+          <shadow type="math_number" id="I90-~CuHjGOKQ]R5V$/K">
+            <field name="NUM">-90</field>
+          </shadow>
+        </value>
+        <value name="TO">
+          <shadow type="math_number" id="{dyn8;LOUyfG9G4eIxEz">
+            <field name="NUM">90</field>
+          </shadow>
+        </value>
+      </block>
+    </value>
+  </block>
+  <block type="procedures_defreturn" id="=EYgs^$+BFU[q8v~pP(V" x="723" y="134">
+    <field name="NAME">random_arms_speed</field>
+    <comment pinned="false" h="80" w="160">Describe this function...</comment>
+    <value name="RETURN">
+      <shadow type="math_number">
+        <field name="NUM">1</field>
+      </shadow>
+      <block type="math_random_int" id="75(rLbcxNnvI9svvE2bh">
+        <value name="FROM">
+          <shadow type="math_number" id="rwZcEz!f-g}@HUxjLyxd">
+            <field name="NUM">30</field>
+          </shadow>
+        </value>
+        <value name="TO">
+          <shadow type="math_number" id="7=F5tZ|XQ)5XfDfv/XS7">
+            <field name="NUM">80</field>
+          </shadow>
+        </value>
+      </block>
+    </value>
+  </block>
+  <block type="procedures_defnoreturn" id="sUTa_!D+ompDB[=.`p_f" x="723" y="258">
+    <field name="NAME">move_arms_randomly</field>
+    <comment pinned="false" h="80" w="160">Describe this function...</comment>
+    <statement name="STACK">
+      <block type="fable_set_module_motor_pos_speed" id="[?nsy,#V::yohjA~zbM4">
+        <mutation xmlns="http://www.w3.org/1999/xhtml" id_input="true"></mutation>
+        <field name="ID">#</field>
+        <value name="MOTOR_POSITION_X">
+          <shadow type="fable_joint_angle" id="d2|;lET,jPj58wcB6f%q">
+            <field name="ANGLE">-60</field>
+          </shadow>
+          <block type="procedures_callreturn" id="1+m_9gp.wuz4!MybwrHe">
+            <mutation name="random_x_angle_left_arm"/>
+          </block>
+        </value>
+        <value name="MOTOR_POSITION_Y">
+          <shadow type="fable_joint_angle" id="D4SZ#H+rjKMn3]Q{0D}O">
+            <field name="ANGLE">30</field>
+          </shadow>
+          <block type="procedures_callreturn" id="x`cnuM+Q@G7zZmRLYf%_">
+            <mutation name="random_y_angle_rigth_arms"/>
+          </block>
+        </value>
+        <value name="MOTORS_SPEEDS">
+          <shadow type="math_number" id="1XCnoThGi13ReKFu7bTD">
+            <field name="NUM">50</field>
+          </shadow>
+          <block type="procedures_callreturn" id="=OQunUX_NLkjL5)W7xh0">
+            <mutation name="random_arms_speed"/>
+          </block>
+        </value>
+        <value name="#">
+          <shadow type="fable_get_module_id" id="):QXe;o=Cf,!s:ICej$i">
+            <mutation xmlns="http://www.w3.org/1999/xhtml" id_input="false"></mutation>
+            <field name="ID">Hub</field>
+          </shadow>
+          <block type="variables_get" id="@DME%|bqjb%^/3ufOw@6">
+            <field name="VAR" id="XZzY:,q76}Y!t5C9KV6c">left_arm</field>
+          </block>
+        </value>
+        <next>
+          <block type="fable_set_module_motor_pos_speed" id="mT#M}7n]yWWDe5s@6IR#">
+            <mutation xmlns="http://www.w3.org/1999/xhtml" id_input="true"></mutation>
+            <field name="ID">#</field>
+            <value name="MOTOR_POSITION_X">
+              <shadow type="fable_joint_angle" id="S|C/dRlizty=-t_5]Zqa">
+                <field name="ANGLE">30</field>
+              </shadow>
+              <block type="procedures_callreturn" id="`[H5d-[h2r{PRkbdM:EI">
+                <mutation name="random_x_angle_rigth_arm"/>
+              </block>
+            </value>
+            <value name="MOTOR_POSITION_Y">
+              <shadow type="fable_joint_angle" id="/1G@WIpB;Vgl-=`4Rb^%">
+                <field name="ANGLE">-30</field>
+              </shadow>
+              <block type="procedures_callreturn" id="~-#kgS(?Jw.x+-SGe5F?">
+                <mutation name="random_y_angle_rigth_arms"/>
+              </block>
+            </value>
+            <value name="MOTORS_SPEEDS">
+              <shadow type="math_number" id="e~xVn{S2.K8i[|F5NBcm">
+                <field name="NUM">50</field>
+              </shadow>
+              <block type="procedures_callreturn" id="}A=o6eArI4XW(e8D1v`E">
+                <mutation name="random_arms_speed"/>
+              </block>
+            </value>
+            <value name="#">
+              <shadow type="fable_get_module_id" id="#z7Cx[dfMamV{6d+YZ{q">
+                <mutation xmlns="http://www.w3.org/1999/xhtml" id_input="false"></mutation>
+                <field name="ID">Hub</field>
+              </shadow>
+              <block type="variables_get" id="[NzndEzE~k(FHn%ZX7_j">
+                <field name="VAR" id="MeLksMw[_,{+OUEMuES{">rigth_arm</field>
+              </block>
+            </value>
+            <next>
+              <block type="fable_wait" id="C^2EJW0qy^:Cx9%vh^Fo">
+                <value name="WAIT">
+                  <shadow type="math_number" id="xXOq`lIR!$:9,+)tiB2@">
+                    <field name="NUM">1</field>
+                  </shadow>
+                </value>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defnoreturn" id="nusF$^6R`uplw6rYs1IK" x="727" y="562">
+    <field name="NAME">camera_eye_pos</field>
+    <comment pinned="false" h="80" w="160">Describe this function...</comment>
+    <statement name="STACK">
+      <block type="variables_set" id="^p6rcf|@_!Lo8lqjFT,$">
+        <field name="VAR" id="x,g@)ZqMB)PRW3k9qn=d">curr_x_face_pos</field>
+        <value name="VALUE">
+          <shadow type="math_number" id="{;`v0)OVhg?d*htI`|i1">
+            <field name="NUM">0</field>
+          </shadow>
+          <block type="math_arithmetic" id="sT$)$@27L@8%I9eVX]n?">
+            <field name="OP">MULTIPLY</field>
+            <value name="A">
+              <shadow type="math_number" id="I0Z0$@B)F2j;eWR5wT1.">
+                <field name="NUM">1</field>
+              </shadow>
+              <block type="math_arithmetic" id="?9e/_flF]Dffi=U1eaWn">
+                <field name="OP">MINUS</field>
+                <value name="A">
+                  <shadow type="math_number">
+                    <field name="NUM">1</field>
+                  </shadow>
+                  <block type="camera_get_center_of_face" id="u^s7NUzM~AWGSb2Bh($U">
+                    <field name="FACE_CENTER">X_COORD</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <shadow type="math_number">
+                    <field name="NUM">200</field>
+                  </shadow>
+                  <block type="variables_get" id="s02w`!hLqu?M+}?V(1iF">
+                    <field name="VAR" id="VDC?(MYHd*_;cPAl,sEX">camara_x_resolution</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <value name="B">
+              <shadow type="math_number" id="A+,~!M#_B|hN!(!p!((B">
+                <field name="NUM">-0.5</field>
+              </shadow>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="variables_set" id="3qqdUNy8Y)M3!ZSGsup3">
+            <field name="VAR" id="Er;^LF*tItKxzf_80}*[">curr_y_face_pos</field>
+            <value name="VALUE">
+              <shadow type="math_number">
+                <field name="NUM">0</field>
+              </shadow>
+              <block type="math_arithmetic" id=":`lK.d|El*j`0RvwGvNI">
+                <field name="OP">MULTIPLY</field>
+                <value name="A">
+                  <shadow type="math_number">
+                    <field name="NUM">1</field>
+                  </shadow>
+                  <block type="math_arithmetic" id="q%mzCOm?QYuuY6dXhSP)">
+                    <field name="OP">MINUS</field>
+                    <value name="A">
+                      <shadow type="math_number">
+                        <field name="NUM">1</field>
+                      </shadow>
+                      <block type="camera_get_center_of_face" id="66D(JrDs(5pB)e,p}%S!">
+                        <field name="FACE_CENTER">Y_COORD</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <shadow type="math_number">
+                        <field name="NUM">200</field>
+                      </shadow>
+                      <block type="variables_get" id="MiPCB,okt#(y-BK2|KX~">
+                        <field name="VAR" id="`2.FzP?=LteXO.*ZYC:^">camera_y_resolution</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <value name="B">
+                  <shadow type="math_number" id="_KZK?LbYO!q+mQ}6K?M!">
+                    <field name="NUM">-0.2</field>
+                  </shadow>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="fable_print" id="RTl|g7sZ#I#+BY*V`T!j">
+                <value name="DATA">
+                  <shadow type="fable_get_time" id="K9%Na[2)r)Z6(w`J[=/d"/>
+                  <block type="fable_text_join" id="v_t?h+S3prr.AorL6|Y9">
+                    <value name="FIRSTTEXT">
+                      <shadow type="text" id="7PP.~z@RizP)DopHeh6C">
+                        <field name="TEXT">X:</field>
+                      </shadow>
+                    </value>
+                    <value name="SECONDTEXT">
+                      <shadow type="math_number" id="tVG0t,upm~uS;Mh=B`75">
+                        <field name="NUM">1</field>
+                      </shadow>
+                      <block type="variables_get" id="#l|/TKY-H)gLk@[V#+m[">
+                        <field name="VAR" id="x,g@)ZqMB)PRW3k9qn=d">curr_x_face_pos</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <next>
+                  <block type="fable_print" id="y+^wL-8rfy:M!QD=qXu}">
+                    <value name="DATA">
+                      <shadow type="fable_get_time"/>
+                      <block type="fable_text_join" id="+]71$6?st`;(Te)1lgR{">
+                        <value name="FIRSTTEXT">
+                          <shadow type="text" id="}*d/dSe7U3^c=o|87Sd?">
+                            <field name="TEXT">Y:</field>
+                          </shadow>
+                        </value>
+                        <value name="SECONDTEXT">
+                          <shadow type="math_number" id="@S^QfM0_-zT0KJ`ay@@m">
+                            <field name="NUM">1</field>
+                          </shadow>
+                          <block type="variables_get" id="Vl-L7Sf;EWG|u$DlUctl">
+                            <field name="VAR" id="Er;^LF*tItKxzf_80}*[">curr_y_face_pos</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="fable_wait" id="l`%+!T]Bf(0hb,)Ynzbg">
+                        <value name="WAIT">
+                          <shadow type="math_number" id="dFc-w)L!$_A-QMlph|a=">
+                            <field name="NUM">0.3</field>
+                          </shadow>
+                        </value>
+                        <next>
+                          <block type="fable_set_face_focus" id="f{MjiT$:sQAEi=,)AJS3">
+                            <value name="POS_X">
+                              <shadow type="math_number" id=")oCl!-V??Knt*Vz5~.VW">
+                                <field name="NUM">0</field>
+                              </shadow>
+                              <block type="variables_get" id="}rg=}gX=TAa#yagQkAFZ">
+                                <field name="VAR" id="x,g@)ZqMB)PRW3k9qn=d">curr_x_face_pos</field>
+                              </block>
+                            </value>
+                            <value name="POS_Y">
+                              <shadow type="math_number" id="]DFHtK[`n}P5CANKf`S2">
+                                <field name="NUM">0</field>
+                              </shadow>
+                              <block type="variables_get" id="/X,WdfBy(37vOUQe[GaQ">
+                                <field name="VAR" id="Er;^LF*tItKxzf_80}*[">curr_y_face_pos</field>
+                              </block>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="controls_if" id="(.+)/dibz#.~#:z(Ts,T" x="698" y="1183">
+    <value name="IF0">
+      <shadow type="logic_boolean" id="?$0V~EsU6c78gM|E}`~D">
+        <field name="BOOL">TRUE</field>
+      </shadow>
+    </value>
+  </block>
+  <block type="logic_operation" id="_:[fDeZ=@bIr|O){@F*`" x="926" y="1251">
+    <field name="OP">AND</field>
+    <value name="A">
+      <shadow type="logic_boolean" id="gek*mvEtrPBCziZc9H(7">
+        <field name="BOOL">TRUE</field>
+      </shadow>
+      <block type="logic_compare" id="(4lXy8:2t8P,4EXGaQh2">
+        <field name="OP">EQ</field>
+        <value name="A">
+          <shadow type="math_number" id=":@c31xTPOP+gT-dUQkY!">
+            <field name="NUM">0</field>
+          </shadow>
+          <block type="variables_get" id="*nkJ0o}4G/0JI+*`XEkx">
+            <field name="VAR" id="x,g@)ZqMB)PRW3k9qn=d">curr_x_face_pos</field>
+          </block>
+        </value>
+        <value name="B">
+          <shadow type="math_number" id="-U@pqm0P^#)jpJ-^NsyU">
+            <field name="NUM">100</field>
+          </shadow>
+        </value>
+      </block>
+    </value>
+    <value name="B">
+      <shadow type="logic_boolean" id="gqJ(X/lJe9BxuNAZFD7x">
+        <field name="BOOL">TRUE</field>
+      </shadow>
+      <block type="logic_compare" id="}24dgZN4a,wHOQk1p=6q">
+        <field name="OP">EQ</field>
+        <value name="A">
+          <shadow type="math_number" id="vDNS72kHdAo%Xf-mJD[z">
+            <field name="NUM">0</field>
+          </shadow>
+        </value>
+        <value name="B">
+          <shadow type="math_number" id="KBo4pQVJo!4NHhC`zPk1">
+            <field name="NUM">0</field>
+          </shadow>
+        </value>
+      </block>
+    </value>
+  </block>
+</xml>

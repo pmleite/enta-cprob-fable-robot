@@ -1,0 +1,73 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <block type="controls_whileUntil" id="dE~I$z??*bRsFwOf(#UB" x="-1115" y="526">
+    <field name="MODE">WHILE</field>
+    <value name="BOOL">
+      <shadow type="logic_boolean" id="NZf?we/AV1!59YAk=L,^">
+        <field name="BOOL">TRUE</field>
+      </shadow>
+    </value>
+    <statement name="DO">
+      <block type="fable_set_module_motor_pos_speed" id="`4bslWmimY27bj5YT8Y8">
+        <mutation xmlns="http://www.w3.org/1999/xhtml" id_input="false"></mutation>
+        <field name="ID">CQD</field>
+        <value name="MOTOR_POSITION_X">
+          <shadow type="fable_joint_angle" id="3(|Ov83i2J(l,i=1U!iG">
+            <field name="ANGLE">0</field>
+          </shadow>
+        </value>
+        <value name="MOTOR_POSITION_Y">
+          <shadow type="fable_joint_angle" id="_:xhuYX?/~3.-^5nC2#4">
+            <field name="ANGLE">-90</field>
+          </shadow>
+        </value>
+        <value name="MOTORS_SPEEDS">
+          <shadow type="math_number" id="fgwhQ@bN$|AY|F8,z|XI">
+            <field name="NUM">100</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="controls_if" id="H{1+/0bSr!(/QK4OFcNc">
+            <value name="IF0">
+              <shadow type="logic_boolean" id="ukQR#KRGjuD3_rX9e37^">
+                <field name="BOOL">TRUE</field>
+              </shadow>
+              <block type="fable_check_custom_key" id="2-pgaInU(aVg#6m9v,$`">
+                <field name="KEYBUTTON">r</field>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="fable_set_module_motor_pos_speed" id="XyYOz]#-]`XCgo0^RH;|">
+                <mutation xmlns="http://www.w3.org/1999/xhtml" id_input="false"></mutation>
+                <field name="ID">CQD</field>
+                <value name="MOTOR_POSITION_X">
+                  <shadow type="fable_joint_angle" id="(]F__~kAEEPr*(Pg^=fs">
+                    <field name="ANGLE">20</field>
+                  </shadow>
+                </value>
+                <value name="MOTOR_POSITION_Y">
+                  <shadow type="fable_joint_angle" id="L#XfwE(WgbV=hZ@B^J0*">
+                    <field name="ANGLE">90</field>
+                  </shadow>
+                </value>
+                <value name="MOTORS_SPEEDS">
+                  <shadow type="math_number" id="1b_xP|?p/PFA#7rO)vL?">
+                    <field name="NUM">100</field>
+                  </shadow>
+                </value>
+                <next>
+                  <block type="fable_wait" id="VM+HR1WoqeUtrk4$o~qY">
+                    <value name="WAIT">
+                      <shadow type="math_number" id="(TbbJKuuRlKO`Z!5%3K4">
+                        <field name="NUM">5</field>
+                      </shadow>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>

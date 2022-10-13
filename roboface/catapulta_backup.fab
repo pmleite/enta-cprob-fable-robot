@@ -1,0 +1,1112 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <variables>
+    <variable type="" id="Tt85Dm|H_5h=d/(Q._KT">velocidade_inicial</variable>
+    <variable type="" id="fn5fWO]r4yw9(4}C4@W=">angulo_inicial_x</variable>
+    <variable type="" id="Xq/K_*oT*EMpwZvUb#`Y">angulo_final_x</variable>
+    <variable type="" id="#vPYRscd_DW;jjuWmjH7">angulo_inicial_y</variable>
+    <variable type="" id="2JaS{50u5nsGP_J+?Cs}">velocidade_final</variable>
+    <variable type="" id="n{qvC!CF[.BF6![#3N-(">with_text</variable>
+    <variable type="" id="zx(Oao,TQW2O=hC;96js">angulo_final_y</variable>
+  </variables>
+  <block type="procedures_defnoreturn" id="N350aPvONk1-Yb*{/8Zz" x="134" y="-3552">
+    <field name="NAME">set_parameter</field>
+    <comment pinned="false" h="80" w="160">Describe this function...</comment>
+    <statement name="STACK">
+      <block type="fable_print" id="]dpgcR.n%rPEO2b]CZ!+">
+        <value name="DATA">
+          <shadow type="fable_get_time" id="%@lB@NGN/h~non*C}Omo"/>
+          <block type="text" id="e1P6EhuJ,X/-Y;EihO{I">
+            <field name="TEXT">Ajuste os angulos X e Y Iniciais</field>
+          </block>
+        </value>
+        <next>
+          <block type="fable_print" id="Jj{26V|4.l]P8MkxX.zT">
+            <value name="DATA">
+              <shadow type="fable_get_time"/>
+              <block type="text" id="%K%43`H@st/gp0Y_^Nhj">
+                <field name="TEXT">(BARRA DE ESPAÇOS para terminar)</field>
+              </block>
+            </value>
+            <next>
+              <block type="controls_whileUntil" id="PNFN]G2.l#lwKaTZa5QQ">
+                <field name="MODE">UNTIL</field>
+                <value name="BOOL">
+                  <shadow type="logic_boolean" id="=;{So=YWDp0Q2qyaJ(ce">
+                    <field name="BOOL">TRUE</field>
+                  </shadow>
+                  <block type="fable_check_custom_key" id="XsB(a[5c)#0x5^c9pu37">
+                    <field name="KEYBUTTON">KEYCODE_SPACEBAR</field>
+                  </block>
+                </value>
+                <statement name="DO">
+                  <block type="procedures_callnoreturn" id="{vv0Tv5%ibEZtLYVV0C5">
+                    <mutation name="set_x_y_initial"/>
+                    <next>
+                      <block type="fable_set_module_motor_pos_speed" id="/sAb1Gs({Ln3P(cfH/h;">
+                        <mutation xmlns="http://www.w3.org/1999/xhtml" id_input="false"></mutation>
+                        <field name="ID">CQD</field>
+                        <value name="MOTOR_POSITION_X">
+                          <shadow type="fable_joint_angle" id="-`_(9tWBeNFv4vaS:(l8">
+                            <field name="ANGLE">0</field>
+                          </shadow>
+                          <block type="variables_get" id="sAf)2Ot@$Ol^(kt,^lTV">
+                            <field name="VAR" id="fn5fWO]r4yw9(4}C4@W=">angulo_inicial_x</field>
+                          </block>
+                        </value>
+                        <value name="MOTOR_POSITION_Y">
+                          <shadow type="fable_joint_angle" id="T9jVJF+J{}0+K3?Kp1;u">
+                            <field name="ANGLE">0</field>
+                          </shadow>
+                          <block type="variables_get" id="847R/+0-0VV1%cSipqU4">
+                            <field name="VAR" id="#vPYRscd_DW;jjuWmjH7">angulo_inicial_y</field>
+                          </block>
+                        </value>
+                        <value name="MOTORS_SPEEDS">
+                          <shadow type="math_number">
+                            <field name="NUM">50</field>
+                          </shadow>
+                          <block type="variables_get" id="[y5NHh`tGi8.eVMPo48%">
+                            <field name="VAR" id="Tt85Dm|H_5h=d/(Q._KT">velocidade_inicial</field>
+                          </block>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+                <next>
+                  <block type="fable_wait" id=":[|cE*9#zCDK`K[ISoVR">
+                    <value name="WAIT">
+                      <shadow type="math_number" id=":CU|2(S6fz4vf;GRp;^a">
+                        <field name="NUM">0.5</field>
+                      </shadow>
+                    </value>
+                    <next>
+                      <block type="fable_print" id="Ma7{wt0}oSd!A;:S{7*,">
+                        <value name="DATA">
+                          <shadow type="fable_get_time"/>
+                          <block type="text" id="_b~c4i{DL:qzL~@FloIj">
+                            <field name="TEXT">Ajuste os angulos X e Y finais</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="fable_print" id=";w*|Eb-[woKW7OwKp0CG">
+                            <value name="DATA">
+                              <shadow type="fable_get_time"/>
+                              <block type="text" id=":a=}#4,KuXtKm_wz*3QF">
+                                <field name="TEXT">(BARRA DE ESPAÇOS para terminar)</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="controls_whileUntil" id="3gsQ@D{=dJjA[Q8-NSQs">
+                                <field name="MODE">UNTIL</field>
+                                <value name="BOOL">
+                                  <shadow type="logic_boolean">
+                                    <field name="BOOL">TRUE</field>
+                                  </shadow>
+                                  <block type="fable_check_custom_key" id="f6AhQkV|LKDF{E?zp)WG">
+                                    <field name="KEYBUTTON">KEYCODE_SPACEBAR</field>
+                                  </block>
+                                </value>
+                                <statement name="DO">
+                                  <block type="procedures_callnoreturn" id="uT0a~`Wba,X27[0T2p`q">
+                                    <mutation name="set_x_y_final"/>
+                                    <next>
+                                      <block type="fable_set_module_motor_pos_speed" id="+mLL{JRads64_U=@?R`G">
+                                        <mutation xmlns="http://www.w3.org/1999/xhtml" id_input="false"></mutation>
+                                        <field name="ID">CQD</field>
+                                        <value name="MOTOR_POSITION_X">
+                                          <shadow type="fable_joint_angle">
+                                            <field name="ANGLE">0</field>
+                                          </shadow>
+                                          <block type="variables_get" id="_T)LQnENa#jL-+/oywa6">
+                                            <field name="VAR" id="Xq/K_*oT*EMpwZvUb#`Y">angulo_final_x</field>
+                                          </block>
+                                        </value>
+                                        <value name="MOTOR_POSITION_Y">
+                                          <shadow type="fable_joint_angle">
+                                            <field name="ANGLE">0</field>
+                                          </shadow>
+                                          <block type="variables_get" id="bvkH5an?z%bwGXno^-)6">
+                                            <field name="VAR" id="zx(Oao,TQW2O=hC;96js">angulo_final_y</field>
+                                          </block>
+                                        </value>
+                                        <value name="MOTORS_SPEEDS">
+                                          <shadow type="math_number">
+                                            <field name="NUM">50</field>
+                                          </shadow>
+                                          <block type="variables_get" id="10P@vZ:EbqY9UiEMjL8-">
+                                            <field name="VAR" id="2JaS{50u5nsGP_J+?Cs}">velocidade_final</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </statement>
+                                <next>
+                                  <block type="fable_wait" id="*+a04q.b[n3!41b@L,Wx">
+                                    <value name="WAIT">
+                                      <shadow type="math_number" id="%zlN-$v0W#G~Z@Et,}y?">
+                                        <field name="NUM">0.5</field>
+                                      </shadow>
+                                    </value>
+                                    <next>
+                                      <block type="fable_print" id="2roZDZj4*Wt^fCON=f%+">
+                                        <value name="DATA">
+                                          <shadow type="fable_get_time"/>
+                                          <block type="text" id="#aIs^u|T}vo:MGO*MEZ[">
+                                            <field name="TEXT">Ajuste A velocidade do tiro</field>
+                                          </block>
+                                        </value>
+                                        <next>
+                                          <block type="fable_print" id="U7])Ir[_Yn:B;z};AL(m">
+                                            <value name="DATA">
+                                              <shadow type="fable_get_time"/>
+                                              <block type="text" id="3}:|VT19c*_~{m2X$gZ_">
+                                                <field name="TEXT">(BARRA DE ESPAÇOS para terminar)</field>
+                                              </block>
+                                            </value>
+                                            <next>
+                                              <block type="controls_whileUntil" id="2|OZLOzb:tW0{w^;{Y[,">
+                                                <field name="MODE">UNTIL</field>
+                                                <value name="BOOL">
+                                                  <shadow type="logic_boolean">
+                                                    <field name="BOOL">TRUE</field>
+                                                  </shadow>
+                                                  <block type="fable_check_custom_key" id="A`A]aE,r|c~~7uuLlEej">
+                                                    <field name="KEYBUTTON">KEYCODE_SPACEBAR</field>
+                                                  </block>
+                                                </value>
+                                                <statement name="DO">
+                                                  <block type="procedures_callnoreturn" id="YDzJO{Kf$;w:sSgfIOw;">
+                                                    <mutation name="velocidade_tiro"/>
+                                                  </block>
+                                                </statement>
+                                                <next>
+                                                  <block type="fable_wait" id="g|)waerv2X.:cuhKo}xs">
+                                                    <value name="WAIT">
+                                                      <shadow type="math_number" id="l*h2ge{)HeXGPc`$,7q[">
+                                                        <field name="NUM">0.5</field>
+                                                      </shadow>
+                                                    </value>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defnoreturn" id="g[HEj9SnQ`DdCC_ZD/:3" x="1747" y="-3561">
+    <field name="NAME">set_x_y_final</field>
+    <comment pinned="false" h="80" w="160">Describe this function...</comment>
+    <statement name="STACK">
+      <block type="controls_if" id="PVT~J2$Z}lTb@fC$esI!">
+        <value name="IF0">
+          <shadow type="logic_boolean">
+            <field name="BOOL">TRUE</field>
+          </shadow>
+          <block type="fable_check_custom_key" id=")R3N#u%l!RpI;}]B;70m">
+            <field name="KEYBUTTON">KEYCODE_RIGHT</field>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="math_change" id="N+Q;CGkyQU{!S:`|ydyc">
+            <field name="VAR" id="Xq/K_*oT*EMpwZvUb#`Y">angulo_final_x</field>
+            <value name="DELTA">
+              <shadow type="math_number" id="fNh~bFpdL|m;usEYbL.R">
+                <field name="NUM">1</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="controls_if" id="s*@HA[RD1,86jF!dlQiD">
+                <value name="IF0">
+                  <shadow type="logic_boolean">
+                    <field name="BOOL">TRUE</field>
+                  </shadow>
+                  <block type="variables_get" id="cIxY8H-}Fuqh#G~P1g|]">
+                    <field name="VAR" id="n{qvC!CF[.BF6![#3N-(">with_text</field>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block type="fable_print" id="qFfeNf,$@h(cro)J^L6p">
+                    <value name="DATA">
+                      <shadow type="fable_get_time"/>
+                      <block type="fable_text_join" id="b=+BH5X?l59wB+dSAUnH">
+                        <value name="FIRSTTEXT">
+                          <shadow type="text" id="zI(u2x7Mn=3pVlqJ^Z.!">
+                            <field name="TEXT">Angulo X final</field>
+                          </shadow>
+                        </value>
+                        <value name="SECONDTEXT">
+                          <shadow type="math_number">
+                            <field name="NUM">1</field>
+                          </shadow>
+                          <block type="variables_get" id="4b^SR?zGJ*r{_M.:L;(H">
+                            <field name="VAR" id="Xq/K_*oT*EMpwZvUb#`Y">angulo_final_x</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </statement>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <next>
+          <block type="controls_if" id="mpDn,Y7R{3[eP!4hHiy@">
+            <value name="IF0">
+              <shadow type="logic_boolean">
+                <field name="BOOL">TRUE</field>
+              </shadow>
+              <block type="fable_check_custom_key" id=":qf3F:q3zC#,qS6fcXFV">
+                <field name="KEYBUTTON">KEYCODE_LEFT</field>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="math_change" id="uIzXTWgu3?oqeHRYIqF`">
+                <field name="VAR" id="Xq/K_*oT*EMpwZvUb#`Y">angulo_final_x</field>
+                <value name="DELTA">
+                  <shadow type="math_number" id="Ql{~VEVg(D|$nLUkOE3b">
+                    <field name="NUM">-1</field>
+                  </shadow>
+                </value>
+                <next>
+                  <block type="controls_if" id="ty_:jR]-n%9bMQ[*cVNY">
+                    <value name="IF0">
+                      <shadow type="logic_boolean">
+                        <field name="BOOL">TRUE</field>
+                      </shadow>
+                      <block type="variables_get" id="%__ocOp}s.Q!+QZsO@?6">
+                        <field name="VAR" id="n{qvC!CF[.BF6![#3N-(">with_text</field>
+                      </block>
+                    </value>
+                    <statement name="DO0">
+                      <block type="fable_print" id="WIs|OsGn3|G70,6uqY|a">
+                        <value name="DATA">
+                          <shadow type="fable_get_time"/>
+                          <block type="fable_text_join" id="qjZJ029~?yoA|lNAe`5F">
+                            <value name="FIRSTTEXT">
+                              <shadow type="text" id="ckgY}E5l$~#5HE=N{|GB">
+                                <field name="TEXT">Angulo X final</field>
+                              </shadow>
+                            </value>
+                            <value name="SECONDTEXT">
+                              <shadow type="math_number">
+                                <field name="NUM">1</field>
+                              </shadow>
+                              <block type="variables_get" id="/GV$6YGyc,tc%zJ9x1m9">
+                                <field name="VAR" id="Xq/K_*oT*EMpwZvUb#`Y">angulo_final_x</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </statement>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <next>
+              <block type="controls_if" id="y1A%FgB9g`[u(peEXE|{">
+                <value name="IF0">
+                  <shadow type="logic_boolean">
+                    <field name="BOOL">TRUE</field>
+                  </shadow>
+                  <block type="fable_check_custom_key" id="byM(|VSVl@uS9+)%g~[#">
+                    <field name="KEYBUTTON">KEYCODE_UP</field>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block type="math_change" id="K;D-:ZlpinW~JO/;zRvE">
+                    <field name="VAR" id="zx(Oao,TQW2O=hC;96js">angulo_final_y</field>
+                    <value name="DELTA">
+                      <shadow type="math_number" id="$*DG7P92j8m_Ww@G_6p[">
+                        <field name="NUM">1</field>
+                      </shadow>
+                    </value>
+                    <next>
+                      <block type="controls_if" id=";)GlIN38|FbIEjqCrtMR">
+                        <value name="IF0">
+                          <shadow type="logic_boolean">
+                            <field name="BOOL">TRUE</field>
+                          </shadow>
+                          <block type="variables_get" id="(@:i|jgxl[7eO4*-9}k=">
+                            <field name="VAR" id="n{qvC!CF[.BF6![#3N-(">with_text</field>
+                          </block>
+                        </value>
+                        <statement name="DO0">
+                          <block type="fable_print" id="KC=RyP^qr5xZwKksOWk]">
+                            <value name="DATA">
+                              <shadow type="fable_get_time"/>
+                              <block type="fable_text_join" id="0$vC[)EPNn5$E-Q5^f%8">
+                                <value name="FIRSTTEXT">
+                                  <shadow type="text" id="YWE;WObnRLqo]j%waBnh">
+                                    <field name="TEXT">Angulo Y final</field>
+                                  </shadow>
+                                </value>
+                                <value name="SECONDTEXT">
+                                  <shadow type="math_number">
+                                    <field name="NUM">1</field>
+                                  </shadow>
+                                  <block type="variables_get" id="$hyC@RCyelR,i1LQ`w*.">
+                                    <field name="VAR" id="zx(Oao,TQW2O=hC;96js">angulo_final_y</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </statement>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+                <next>
+                  <block type="controls_if" id="OD6mQ^`i,RHwy14jaMJ?">
+                    <value name="IF0">
+                      <shadow type="logic_boolean">
+                        <field name="BOOL">TRUE</field>
+                      </shadow>
+                      <block type="fable_check_custom_key" id="!I;5x`1;:g~PDV=7qvM%">
+                        <field name="KEYBUTTON">KEYCODE_DOWN</field>
+                      </block>
+                    </value>
+                    <statement name="DO0">
+                      <block type="math_change" id="7.$[vYU#rx.(Io@.[L,Y">
+                        <field name="VAR" id="zx(Oao,TQW2O=hC;96js">angulo_final_y</field>
+                        <value name="DELTA">
+                          <shadow type="math_number" id=")z?-7`im,MC00l6[M-!X">
+                            <field name="NUM">-1</field>
+                          </shadow>
+                        </value>
+                        <next>
+                          <block type="controls_if" id="^S+DF])yp6uVVbO{XTGD">
+                            <value name="IF0">
+                              <shadow type="logic_boolean">
+                                <field name="BOOL">TRUE</field>
+                              </shadow>
+                              <block type="variables_get" id="k.|s}%p6[HW5-}pMda*d">
+                                <field name="VAR" id="n{qvC!CF[.BF6![#3N-(">with_text</field>
+                              </block>
+                            </value>
+                            <statement name="DO0">
+                              <block type="fable_print" id="{a6~r+kP@6`AcTx/+i4?">
+                                <value name="DATA">
+                                  <shadow type="fable_get_time"/>
+                                  <block type="fable_text_join" id="MXo?{Xx)CTgH}N%`Bl(S">
+                                    <value name="FIRSTTEXT">
+                                      <shadow type="text" id="NvP|?;~xiER,V-T1cVi=">
+                                        <field name="TEXT">Angulo Y final</field>
+                                      </shadow>
+                                    </value>
+                                    <value name="SECONDTEXT">
+                                      <shadow type="math_number">
+                                        <field name="NUM">1</field>
+                                      </shadow>
+                                      <block type="variables_get" id="q4#6/E[fg1HgW};Ie|?Z">
+                                        <field name="VAR" id="zx(Oao,TQW2O=hC;96js">angulo_final_y</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                              </block>
+                            </statement>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defnoreturn" id="ZyqsEKZ_GT7ZOHN@,G[k" x="1089" y="-3454">
+    <field name="NAME">set_x_y_initial</field>
+    <comment pinned="false" h="80" w="160">Describe this function...</comment>
+    <statement name="STACK">
+      <block type="controls_if" id="M`xmkfzQs1Rr5Oh;VluM">
+        <value name="IF0">
+          <shadow type="logic_boolean" id="tRf_bqv[8]4@}`DAVZ`L">
+            <field name="BOOL">TRUE</field>
+          </shadow>
+          <block type="fable_check_custom_key" id="@c6cu4!03+/|[`?F|apV">
+            <field name="KEYBUTTON">KEYCODE_RIGHT</field>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="math_change" id="sEl6VL#bGMC|TB0418OX">
+            <field name="VAR" id="fn5fWO]r4yw9(4}C4@W=">angulo_inicial_x</field>
+            <value name="DELTA">
+              <shadow type="math_number" id="%X[6DV:L=1[PJNXKl~x{">
+                <field name="NUM">1</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="controls_if" id="IRr-+VC^h[958aROI@i`">
+                <value name="IF0">
+                  <shadow type="logic_boolean" id="D`Q!*)j.=JGX:-Y%]t}F">
+                    <field name="BOOL">TRUE</field>
+                  </shadow>
+                  <block type="variables_get" id="J?HJ~^7_/bdwsuqz3C!s">
+                    <field name="VAR" id="n{qvC!CF[.BF6![#3N-(">with_text</field>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block type="fable_print" id="|q!bL=_~U_x(hG?_lbhQ">
+                    <value name="DATA">
+                      <shadow type="fable_get_time"/>
+                      <block type="fable_text_join" id="w.%q5kM+^;Z[pf48XLdZ">
+                        <value name="FIRSTTEXT">
+                          <shadow type="text" id="FqXxmLB_hzO?:dw^ghUT">
+                            <field name="TEXT">Angulo X inicial</field>
+                          </shadow>
+                        </value>
+                        <value name="SECONDTEXT">
+                          <shadow type="math_number">
+                            <field name="NUM">1</field>
+                          </shadow>
+                          <block type="variables_get" id="wv~TU(X|S/RS|ARmBAz.">
+                            <field name="VAR" id="fn5fWO]r4yw9(4}C4@W=">angulo_inicial_x</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </statement>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <next>
+          <block type="controls_if" id=";hAg6r~L0_#[P%W59|%:">
+            <value name="IF0">
+              <shadow type="logic_boolean">
+                <field name="BOOL">TRUE</field>
+              </shadow>
+              <block type="fable_check_custom_key" id="D%0~`H]BV$F)+j9Yzp-t">
+                <field name="KEYBUTTON">KEYCODE_LEFT</field>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="math_change" id="!gsny0V7iba~B1v1Jp*+">
+                <field name="VAR" id="fn5fWO]r4yw9(4}C4@W=">angulo_inicial_x</field>
+                <value name="DELTA">
+                  <shadow type="math_number" id="4(#)V0fYGplvE;,;]Dg#">
+                    <field name="NUM">-1</field>
+                  </shadow>
+                </value>
+                <next>
+                  <block type="controls_if" id="aRd=1tsu5|Xv;=WAVtu(">
+                    <value name="IF0">
+                      <shadow type="logic_boolean">
+                        <field name="BOOL">TRUE</field>
+                      </shadow>
+                      <block type="variables_get" id="D[yd#C5jXE$XOam~M5FG">
+                        <field name="VAR" id="n{qvC!CF[.BF6![#3N-(">with_text</field>
+                      </block>
+                    </value>
+                    <statement name="DO0">
+                      <block type="fable_print" id="+Sp^PoN,jU(zCa%PgYzS">
+                        <value name="DATA">
+                          <shadow type="fable_get_time"/>
+                          <block type="fable_text_join" id="/SbKKa1,quth63YPC?}=">
+                            <value name="FIRSTTEXT">
+                              <shadow type="text" id="4@8:!4,)j9aR),E~OGU2">
+                                <field name="TEXT">Angulo X inicial</field>
+                              </shadow>
+                            </value>
+                            <value name="SECONDTEXT">
+                              <shadow type="math_number">
+                                <field name="NUM">1</field>
+                              </shadow>
+                              <block type="variables_get" id="B}fzns/OHW`.uVDIXuCp">
+                                <field name="VAR" id="fn5fWO]r4yw9(4}C4@W=">angulo_inicial_x</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </statement>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <next>
+              <block type="controls_if" id="(p}o*S[7E?0NLNtRv3z%">
+                <value name="IF0">
+                  <shadow type="logic_boolean">
+                    <field name="BOOL">TRUE</field>
+                  </shadow>
+                  <block type="fable_check_custom_key" id="|.K@4$~raL=BjX~4j%?v">
+                    <field name="KEYBUTTON">KEYCODE_UP</field>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block type="math_change" id="kowwijH;JE1,E((tQ|Py">
+                    <field name="VAR" id="#vPYRscd_DW;jjuWmjH7">angulo_inicial_y</field>
+                    <value name="DELTA">
+                      <shadow type="math_number" id="utWdxlkOY|ZohjO0A~(V">
+                        <field name="NUM">1</field>
+                      </shadow>
+                    </value>
+                    <next>
+                      <block type="controls_if" id="Je!*7P+tHCft5KG!xe(+">
+                        <value name="IF0">
+                          <shadow type="logic_boolean">
+                            <field name="BOOL">TRUE</field>
+                          </shadow>
+                          <block type="variables_get" id="}s=]!@B]2^=9o7j!gWFW">
+                            <field name="VAR" id="n{qvC!CF[.BF6![#3N-(">with_text</field>
+                          </block>
+                        </value>
+                        <statement name="DO0">
+                          <block type="fable_print" id="r1iuyo8`#AU]RZb.;htl">
+                            <value name="DATA">
+                              <shadow type="fable_get_time"/>
+                              <block type="fable_text_join" id="5;!1HWZ9IKlvgn,lzck5">
+                                <value name="FIRSTTEXT">
+                                  <shadow type="text" id="xC;MWjD)KTY)u#TY!n1B">
+                                    <field name="TEXT">Angulo Y inicial</field>
+                                  </shadow>
+                                </value>
+                                <value name="SECONDTEXT">
+                                  <shadow type="math_number">
+                                    <field name="NUM">1</field>
+                                  </shadow>
+                                  <block type="variables_get" id="K4bjZF*?r:Rt{UJVny;w">
+                                    <field name="VAR" id="#vPYRscd_DW;jjuWmjH7">angulo_inicial_y</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </statement>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+                <next>
+                  <block type="controls_if" id="ZubgioaqZf*JDO$,%6Uf">
+                    <value name="IF0">
+                      <shadow type="logic_boolean">
+                        <field name="BOOL">TRUE</field>
+                      </shadow>
+                      <block type="fable_check_custom_key" id="br;1;i{e;ks1^3M_Y%eT">
+                        <field name="KEYBUTTON">KEYCODE_DOWN</field>
+                      </block>
+                    </value>
+                    <statement name="DO0">
+                      <block type="math_change" id="j+FBbg,^(N|Gx4O{OD-V">
+                        <field name="VAR" id="#vPYRscd_DW;jjuWmjH7">angulo_inicial_y</field>
+                        <value name="DELTA">
+                          <shadow type="math_number" id="WAj!J:^[_=DvcqX[qY:8">
+                            <field name="NUM">-1</field>
+                          </shadow>
+                        </value>
+                        <next>
+                          <block type="controls_if" id="IC4jd=pz~:?c@UEQMYFJ">
+                            <value name="IF0">
+                              <shadow type="logic_boolean">
+                                <field name="BOOL">TRUE</field>
+                              </shadow>
+                              <block type="variables_get" id="lEl]Urd-H)?[d-X|YJ`T">
+                                <field name="VAR" id="n{qvC!CF[.BF6![#3N-(">with_text</field>
+                              </block>
+                            </value>
+                            <statement name="DO0">
+                              <block type="fable_print" id="yzocyOo;?or=yR!KS7V(">
+                                <value name="DATA">
+                                  <shadow type="fable_get_time"/>
+                                  <block type="fable_text_join" id="jg,ZABBIRO=1t~5/0c.X">
+                                    <value name="FIRSTTEXT">
+                                      <shadow type="text" id="kq`9,uB.$RVJpUH@OO.c">
+                                        <field name="TEXT">Angulo Y inicial</field>
+                                      </shadow>
+                                    </value>
+                                    <value name="SECONDTEXT">
+                                      <shadow type="math_number">
+                                        <field name="NUM">1</field>
+                                      </shadow>
+                                      <block type="variables_get" id="z)G2VCU$t(c=II}^F-9V">
+                                        <field name="VAR" id="#vPYRscd_DW;jjuWmjH7">angulo_inicial_y</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                              </block>
+                            </statement>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defnoreturn" id="w@/M}r^COQz64)4{tDa=" x="1749" y="-2528">
+    <field name="NAME">disparar</field>
+    <comment pinned="false" h="80" w="160">Describe this function...</comment>
+    <statement name="STACK">
+      <block type="fable_set_module_motor_pos_speed" id="Ylu)FBc,n3yBb(~1h/[b">
+        <mutation xmlns="http://www.w3.org/1999/xhtml" id_input="false"></mutation>
+        <field name="ID">CQD</field>
+        <value name="MOTOR_POSITION_X">
+          <shadow type="fable_joint_angle">
+            <field name="ANGLE">0</field>
+          </shadow>
+          <block type="variables_get" id="A9|3!c:(L~`ExDjQk}a@">
+            <field name="VAR" id="fn5fWO]r4yw9(4}C4@W=">angulo_inicial_x</field>
+          </block>
+        </value>
+        <value name="MOTOR_POSITION_Y">
+          <shadow type="fable_joint_angle">
+            <field name="ANGLE">0</field>
+          </shadow>
+          <block type="variables_get" id="IKq@)iciS+5_}3mHSu5;">
+            <field name="VAR" id="#vPYRscd_DW;jjuWmjH7">angulo_inicial_y</field>
+          </block>
+        </value>
+        <value name="MOTORS_SPEEDS">
+          <shadow type="math_number">
+            <field name="NUM">50</field>
+          </shadow>
+          <block type="variables_get" id="X}Pl`}o/-KImBuZBCffK">
+            <field name="VAR" id="Tt85Dm|H_5h=d/(Q._KT">velocidade_inicial</field>
+          </block>
+        </value>
+        <next>
+          <block type="fable_wait" id="Xn(b|#?#lwgY^uW:44(8">
+            <value name="WAIT">
+              <shadow type="math_number" id=")]].5}/@48v^w$^26h!~">
+                <field name="NUM">1</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="controls_whileUntil" id=",@2f#lx.-Y01y$m9kRlU">
+                <field name="MODE">WHILE</field>
+                <value name="BOOL">
+                  <shadow type="logic_boolean" id="|P=30md1LKCq);uw#r}0">
+                    <field name="BOOL">TRUE</field>
+                  </shadow>
+                </value>
+                <statement name="DO">
+                  <block type="controls_if" id="0WUn_`=)V?@?7@BC9Gqm">
+                    <value name="IF0">
+                      <shadow type="logic_boolean">
+                        <field name="BOOL">TRUE</field>
+                      </shadow>
+                      <block type="fable_check_custom_key" id="V$M29twccBr^W3wQb;zc">
+                        <field name="KEYBUTTON">KEYCODE_SPACEBAR</field>
+                      </block>
+                    </value>
+                    <statement name="DO0">
+                      <block type="fable_wait" id="niLIQ*%1Fu`I]J~0LAml">
+                        <value name="WAIT">
+                          <shadow type="math_number" id="5Z=zXHeBgTw6Ee!p}Kt9">
+                            <field name="NUM">0.5</field>
+                          </shadow>
+                        </value>
+                        <next>
+                          <block type="fable_print" id="8W{{ikt*6[]yn+5UN_UX">
+                            <value name="DATA">
+                              <shadow type="fable_get_time"/>
+                              <block type="text" id="MZ;tzU5UBJu3RW~`J)%0">
+                                <field name="TEXT">Disparo em 3</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="fable_wait" id="er/][8(C*BETBp~~|/BD">
+                                <value name="WAIT">
+                                  <shadow type="math_number" id="PagX|d%i4BjJsII}=!v7">
+                                    <field name="NUM">1</field>
+                                  </shadow>
+                                </value>
+                                <next>
+                                  <block type="fable_print" id="19ENmq,7~X#PZ:_:ZnKx">
+                                    <value name="DATA">
+                                      <shadow type="fable_get_time"/>
+                                      <block type="text" id="obZtrY!ccVA~7,sDl6PD">
+                                        <field name="TEXT">Disparo em 2</field>
+                                      </block>
+                                    </value>
+                                    <next>
+                                      <block type="fable_wait" id="${:MJMQmEVxTd^-(^t^l">
+                                        <value name="WAIT">
+                                          <shadow type="math_number" id="9v?z,7}zrm$IY9VLxMiS">
+                                            <field name="NUM">1</field>
+                                          </shadow>
+                                        </value>
+                                        <next>
+                                          <block type="fable_print" id="E.kI=To`1b-q96~=kA*?">
+                                            <value name="DATA">
+                                              <shadow type="fable_get_time"/>
+                                              <block type="text" id="6xNNphq$y4PZcPFlJJN[">
+                                                <field name="TEXT">Disparo em 1</field>
+                                              </block>
+                                            </value>
+                                            <next>
+                                              <block type="fable_wait" id="0qhTo;hVOY@Cr}VVP/%!">
+                                                <value name="WAIT">
+                                                  <shadow type="math_number" id="D!LsRsi`j^:.IZ-`d(H5">
+                                                    <field name="NUM">1</field>
+                                                  </shadow>
+                                                </value>
+                                                <next>
+                                                  <block type="fable_print" id="pA_/0ewi:QlOfsw7Bahv">
+                                                    <value name="DATA">
+                                                      <shadow type="fable_get_time"/>
+                                                      <block type="text" id="3S15)9JN*{tz|eIun:65">
+                                                        <field name="TEXT">La vai bola</field>
+                                                      </block>
+                                                    </value>
+                                                    <next>
+                                                      <block type="fable_set_module_motor_pos_speed" id="R_[y29wOcl+%I70Cak/e">
+                                                        <mutation xmlns="http://www.w3.org/1999/xhtml" id_input="false"></mutation>
+                                                        <field name="ID">CQD</field>
+                                                        <value name="MOTOR_POSITION_X">
+                                                          <shadow type="fable_joint_angle">
+                                                            <field name="ANGLE">0</field>
+                                                          </shadow>
+                                                          <block type="variables_get" id="~ymf7lfGV3YTT}0,9@24">
+                                                            <field name="VAR" id="Xq/K_*oT*EMpwZvUb#`Y">angulo_final_x</field>
+                                                          </block>
+                                                        </value>
+                                                        <value name="MOTOR_POSITION_Y">
+                                                          <shadow type="fable_joint_angle">
+                                                            <field name="ANGLE">0</field>
+                                                          </shadow>
+                                                          <block type="variables_get" id="{U*RHP2w*y(csJ`4slS2">
+                                                            <field name="VAR" id="zx(Oao,TQW2O=hC;96js">angulo_final_y</field>
+                                                          </block>
+                                                        </value>
+                                                        <value name="MOTORS_SPEEDS">
+                                                          <shadow type="math_number">
+                                                            <field name="NUM">50</field>
+                                                          </shadow>
+                                                          <block type="variables_get" id="G0,g9R?hMV@-v#^DJ~qL">
+                                                            <field name="VAR" id="2JaS{50u5nsGP_J+?Cs}">velocidade_final</field>
+                                                          </block>
+                                                        </value>
+                                                        <next>
+                                                          <block type="fable_print" id="kT::(cpl,jD2{sD!]=qn">
+                                                            <value name="DATA">
+                                                              <shadow type="fable_get_time"/>
+                                                              <block type="text" id="-=,J^guP7iZ2YInni6%r">
+                                                                <field name="TEXT">Tiro efetuado com sucesso!</field>
+                                                              </block>
+                                                            </value>
+                                                            <next>
+                                                              <block type="fable_wait" id="JDiR+d}q1,[qi0a]p`}3">
+                                                                <value name="WAIT">
+                                                                  <shadow type="math_number" id="s@vu-)6FYKBF1ZZum:P9">
+                                                                    <field name="NUM">3</field>
+                                                                  </shadow>
+                                                                </value>
+                                                                <next>
+                                                                  <block type="controls_flow_statements" id="I,QMk1TIM01pR:$!K=s+">
+                                                                    <field name="FLOW">BREAK</field>
+                                                                  </block>
+                                                                </next>
+                                                              </block>
+                                                            </next>
+                                                          </block>
+                                                        </next>
+                                                      </block>
+                                                    </next>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                  </block>
+                </statement>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="variables_set" id="3pH3seiAp.3t{X+fnuPi" x="128" y="-2376">
+    <field name="VAR" id="Tt85Dm|H_5h=d/(Q._KT">velocidade_inicial</field>
+    <value name="VALUE">
+      <shadow type="math_number" id="_Jtw(txOMM5=5(Ten%k_">
+        <field name="NUM">60</field>
+      </shadow>
+    </value>
+    <next>
+      <block type="variables_set" id="mdZNuVFK0Nh|nTwH^y6O">
+        <field name="VAR" id="fn5fWO]r4yw9(4}C4@W=">angulo_inicial_x</field>
+        <value name="VALUE">
+          <shadow type="math_number" id="2,A6jdq%i=mRozpUV@i`">
+            <field name="NUM">0</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="variables_set" id="nh*AMQ@L;0Te.t`gQR/L">
+            <field name="VAR" id="#vPYRscd_DW;jjuWmjH7">angulo_inicial_y</field>
+            <value name="VALUE">
+              <shadow type="math_number" id="{^OkhTbObFU$|7Fl@4.I">
+                <field name="NUM">-60</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="variables_set" id="K47JX%UA|*GF6F;zA3=)">
+                <field name="VAR" id="2JaS{50u5nsGP_J+?Cs}">velocidade_final</field>
+                <value name="VALUE">
+                  <shadow type="math_number" id="jqa7+nyM?%kMeff-6)L6">
+                    <field name="NUM">60</field>
+                  </shadow>
+                </value>
+                <next>
+                  <block type="variables_set" id="nQUQ6F}z2l(y~y~2mMJJ">
+                    <field name="VAR" id="Xq/K_*oT*EMpwZvUb#`Y">angulo_final_x</field>
+                    <value name="VALUE">
+                      <shadow type="math_number" id="Y=Cg-hxZYn`eZ.Ntlh+W">
+                        <field name="NUM">0</field>
+                      </shadow>
+                    </value>
+                    <next>
+                      <block type="variables_set" id="@=@_e^`[qssrps/B*s1V">
+                        <field name="VAR" id="zx(Oao,TQW2O=hC;96js">angulo_final_y</field>
+                        <value name="VALUE">
+                          <shadow type="math_number" id="q-(nDW]tmZkHh_V]B4Dc">
+                            <field name="NUM">10</field>
+                          </shadow>
+                        </value>
+                        <next>
+                          <block type="variables_set" id="fn#kX9%$Ql#?=eN?ZR6N">
+                            <field name="VAR" id="n{qvC!CF[.BF6![#3N-(">with_text</field>
+                            <value name="VALUE">
+                              <shadow type="math_number" id="e4f`MnYql)r@2DU9~vn8">
+                                <field name="NUM">0</field>
+                              </shadow>
+                              <block type="logic_boolean" id="D`fFrjZDT{z?rp11RUey">
+                                <field name="BOOL">FALSE</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="fable_set_module_motor_pos_speed" id="Wi+fs_g/_f0z6{^i;IWF">
+                                <mutation xmlns="http://www.w3.org/1999/xhtml" id_input="false"></mutation>
+                                <field name="ID">CQD</field>
+                                <value name="MOTOR_POSITION_X">
+                                  <shadow type="fable_joint_angle" id="`CiT0A7Urn,YhQ(HAkUl">
+                                    <field name="ANGLE">0</field>
+                                  </shadow>
+                                  <block type="variables_get" id="Y~zMV/Z9kxKHB:1?Sncc">
+                                    <field name="VAR" id="fn5fWO]r4yw9(4}C4@W=">angulo_inicial_x</field>
+                                  </block>
+                                </value>
+                                <value name="MOTOR_POSITION_Y">
+                                  <shadow type="fable_joint_angle">
+                                    <field name="ANGLE">0</field>
+                                  </shadow>
+                                  <block type="variables_get" id="Y*Z5:N3R,5eV6?avF)7u">
+                                    <field name="VAR" id="#vPYRscd_DW;jjuWmjH7">angulo_inicial_y</field>
+                                  </block>
+                                </value>
+                                <value name="MOTORS_SPEEDS">
+                                  <shadow type="math_number">
+                                    <field name="NUM">50</field>
+                                  </shadow>
+                                  <block type="variables_get" id="u}PFCrH3*}an.wPsA!y[">
+                                    <field name="VAR" id="Tt85Dm|H_5h=d/(Q._KT">velocidade_inicial</field>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="fable_wait" id="^{}-;FB7v+i(B{mqn5Op">
+                                    <value name="WAIT">
+                                      <shadow type="math_number" id="cH.Iq(/tH}+_N~P4`K_$">
+                                        <field name="NUM">2</field>
+                                      </shadow>
+                                    </value>
+                                    <next>
+                                      <block type="controls_whileForever" id="k_d?ryZ%#25;=gkb6J^C">
+                                        <statement name="DO">
+                                          <block type="procedures_callnoreturn" id="qdo4=^X!a0Z=~hH0ZBx{">
+                                            <mutation name="set_parameter"/>
+                                            <next>
+                                              <block type="fable_print" id="U-B3p^|!~VJPh1zX96i0">
+                                                <value name="DATA">
+                                                  <shadow type="fable_get_time"/>
+                                                  <block type="text" id="@%b4U^8:EzhhV0CA66/;">
+                                                    <field name="TEXT">Disparar bola (Carregue a bola no suporte)</field>
+                                                  </block>
+                                                </value>
+                                                <next>
+                                                  <block type="fable_print" id="t)chE33Pt?~6k.+tezsk">
+                                                    <value name="DATA">
+                                                      <shadow type="fable_get_time"/>
+                                                      <block type="text" id="D/n|-_C;r`ZK^E|MGwm:">
+                                                        <field name="TEXT">BARRA DE ESPAÇOS PARA DISPARAR</field>
+                                                      </block>
+                                                    </value>
+                                                    <next>
+                                                      <block type="procedures_callnoreturn" id="%@//?K8=RLxlYbk0p_$!">
+                                                        <mutation name="disparar"/>
+                                                        <next>
+                                                          <block type="fable_wait" id=",e_7V-`@?0edQJ4x2(3l">
+                                                            <value name="WAIT">
+                                                              <shadow type="math_number" id="OdT/%UD-k=WV]5}O=D3%">
+                                                                <field name="NUM">3</field>
+                                                              </shadow>
+                                                            </value>
+                                                          </block>
+                                                        </next>
+                                                      </block>
+                                                    </next>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </statement>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+  <block type="procedures_defnoreturn" id="H%M7B5e`dSiFEdfY(@Sz" x="1087" y="-2424">
+    <field name="NAME">velocidade_tiro</field>
+    <comment pinned="false" h="80" w="160">Describe this function...</comment>
+    <statement name="STACK">
+      <block type="controls_if" id="|O%2yXV,$9?Vw{11E:wP">
+        <value name="IF0">
+          <shadow type="logic_boolean">
+            <field name="BOOL">TRUE</field>
+          </shadow>
+          <block type="fable_check_custom_key" id="U(~|)KM^dUTWBa[DWI5$">
+            <field name="KEYBUTTON">KEYCODE_UP</field>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="math_change" id="WtzK{JmbuZ0Y5/LytXq5">
+            <field name="VAR" id="2JaS{50u5nsGP_J+?Cs}">velocidade_final</field>
+            <value name="DELTA">
+              <shadow type="math_number" id="E)=ta!,OXndU/2Z#`;D9">
+                <field name="NUM">1</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="fable_print" id="m[vw@^1/K$/4x8{6F,SH">
+                <value name="DATA">
+                  <shadow type="fable_get_time"/>
+                  <block type="fable_text_join" id="roJ:5$rU|hN~66!j!q1%">
+                    <value name="FIRSTTEXT">
+                      <shadow type="text" id="E)p~cz1.SWi/[ttb@A9=">
+                        <field name="TEXT">Velicidade atual: </field>
+                      </shadow>
+                    </value>
+                    <value name="SECONDTEXT">
+                      <shadow type="math_number">
+                        <field name="NUM">1</field>
+                      </shadow>
+                      <block type="variables_get" id="|(]BgWzDsxf9-GFu%pDu">
+                        <field name="VAR" id="2JaS{50u5nsGP_J+?Cs}">velocidade_final</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <next>
+          <block type="controls_if" id="*}3.-~e1Y}S{!E`LQMr^">
+            <value name="IF0">
+              <shadow type="logic_boolean">
+                <field name="BOOL">TRUE</field>
+              </shadow>
+              <block type="fable_check_custom_key" id="qKpqnVrK%J_JendGjA$2">
+                <field name="KEYBUTTON">KEYCODE_DOWN</field>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="math_change" id="XA!Fi3hw$62vhC1)SyrO">
+                <field name="VAR" id="2JaS{50u5nsGP_J+?Cs}">velocidade_final</field>
+                <value name="DELTA">
+                  <shadow type="math_number" id="J~c7VXam4rXd.SHpme6/">
+                    <field name="NUM">-1</field>
+                  </shadow>
+                </value>
+                <next>
+                  <block type="fable_print" id="!C=K^S$TmQr`$6(}@?g3">
+                    <value name="DATA">
+                      <shadow type="fable_get_time"/>
+                      <block type="fable_text_join" id="[C]p20jyuu?|r2m/o4z.">
+                        <value name="FIRSTTEXT">
+                          <shadow type="text" id="0Yu9E/D1*#:QLEuMAO~0">
+                            <field name="TEXT">Velocidade atual</field>
+                          </shadow>
+                        </value>
+                        <value name="SECONDTEXT">
+                          <shadow type="math_number">
+                            <field name="NUM">1</field>
+                          </shadow>
+                          <block type="variables_get" id="Jp%vH-MY_xCGW1@rg(6F">
+                            <field name="VAR" id="2JaS{50u5nsGP_J+?Cs}">velocidade_final</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>
